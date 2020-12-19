@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<!--
+<link rel="apple-touch-icon" href="img/apple_icons_57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple_icons_72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple_icons_114x114.png">
+-->
+<title>107创新实验室</title>
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100,400italic,700,500,900" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/revslider.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+
+<!--mp4视频插件-->
+<link rel="stylesheet" href="css/jsmodern.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jsmodern.min.js"></script>
+<style>
+#video {
+	width: 970px;
+	height: 594px;
+	margin: 0 auto;
+	position: relative;
+}
+#video video {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+.VideoBtn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin-left: -35px;
+	margin-top: -35px;
+	cursor: pointer;
+	z-index: 10;
+}
+</style>
+<!--视频插件调用方法-->
+<script>
+    $(function () {
+        //视频
+        jsModern.video("#video");
+        //播放视频
+        $(".VideoBtn").click(function () {
+            var video = document.getElementById("videoShow");
+            video.play();
+            $('.VideoBtn').hide();
+        })
+        //监听视频的播放状态
+        var video = document.getElementById("videoShow");
+        video.oncanplay = function () {
+            $(".VideoBtn").show();
+            //$("#video").attr("poster","");
+        }
+        //视频播放事件
+        video.onplay = function () {
+            $("#videoShow").attr("poster", "");
+            $(".VideoBtn").hide();
+        };
+        video.onplaying = function () {
+            $(".VideoBtn").hide();
+        };
+    
+        //视频暂停事件
+        video.onpause = function () {
+            $(".VideoBtn").show();
+        };
+        //点击视频周围暂停播放图片出现
+        video.onclick = function () {
+            if (video.paused) {
+                $(".VideoBtn").hide();
+                video.play();
+            } else {
+                $(".VideoBtn").show();
+                video.pause();
+            }
+        };
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+	<div class="main_header type1">
+        <div class="header_parent_wrap">
+            <header>
+                <div class="container">
+                	<a class="top_menu_toggler" href="javascript:void(0)"></a>
+                	<div class="logo_sect">
+                        <a href="index.html" class="logo"><img src="img/logo.png" class="logo_def" alt="" /><img src="img/retina/logo.png" class="logo_retina" alt="" /></a>
+                    </div>
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu-item-has-children current-menu-parent"><a href="index.html">首页</a></li>
+                            <li class="menu-item-has-children"><a href="aboutus.html">关于我们</a></li>
+                            <li class="menu-item-has-children"><a href="blog.html">技术博客</a></li>
+                            <li class="menu-item-has-children"><a href="404.html">成员介绍</a></li>
+                            <li class="menu-item-has-children"><a href="http://192.168.2.219/nextcloud/">NextCloud</a></li>
+                            <li class="menu-item-has-children"><a href="http://192.168.2.219/dk/">党课考试</a></li>
+                            <li class="menu-item-has-children"><a href="recruit.html">加入我们</a></li>
+                        </ul>
+                    </nav>                   
+                    <div class="clear"></div>
+                </div>
+            </header>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+    	<div class="container">
+        	<div class="content_block row no-sidebar">
+            	<div class="fl-container">
+                	<div class="posts-block">
+                        <div class="contentarea">  
+                        	<!-- Slider -->                                        
+                            <div class="fw_block bg_start wall_wrap">
+                            	<div class="row">
+                                    <div class="col-sm-12 first-module module_slider module_cont pb0">
+                                    	<div class="slider_container">
+                                            <div class="fullscreen_slider slider_bg">
+                                                <ul>
+
+
+                                                    <!-- SLIDE 1 -->
+                                                    <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+                                                        <img src="img/slider/transparent.png" alt="slide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                                                        <!-- LAYER NR. 1 -->
+                                                        <div class="tp-caption lfb ltb tp-resizeme slide_img slide_left_img"
+                                                             data-x="0"
+                                                             data-y="0"
+                                                             data-speed="800"
+                                                             data-start="700"
+                                                             data-easing="Power4.easeOut"
+                                                             data-endspeed="500"
+                                                             data-endeasing="Power4.easeIn"><img src="img/slider/chair_left.png" alt=""/>
+                                                        </div>
+                                                    
+                                                        <!-- LAYER NR. 2 -->
+                                                        <div class="tp-caption lfb ltb tp-resizeme slide_img slide_right_img"
+                                                             data-x="0"
+                                                             data-y="0"
+                                                             data-speed="1000"
+                                                             data-start="1200"
+                                                             data-easing="Power4.easeOut"
+                                                             data-endspeed="500"
+                                                             data-endeasing="Power4.easeIn"><img src="img/slider/chair_right.png" alt=""/>
+                                                        </div>
+                                                    
+                                                        <!-- LAYER NR. 3 -->
+                                                        <div class="tp-caption lfb ltb tp-resizeme slide_descr slide_info_center"
+                                                             data-x="0"
+                                                             data-y="214"
+                                                             data-speed="600"
+                                                             data-start="1200"
+                                                             data-easing="Power4.easeOut"
+                                                             data-endspeed="300"
+                                                             data-endeasing="Power4.easeIn">南京航空航天大学金城学院信息工程学院
+                                                        </div>
+                                                    
+                                                        <!-- LAYER NR. 4 -->
+                                                        <div class="tp-caption lfb ltb tp-resizeme slide_descr slide_info_center"
+                                                             data-x="0"
+                                                             data-y="351"
+                                                             data-speed="600"
+                                                             data-start="1200"
+                                                             data-easing="Power4.easeOut"
+                                                             data-endspeed="600"
+                                                             data-endeasing="Power4.easeIn">107创新实验室
+                                                        </div>
+                                                    
+                                                    
+                                                        <div class="tp-caption lfb ltb tp-resizeme slide_btn"
+                                                            data-x="514"
+                                                            data-y="479"
+                                                            data-speed="800"
+                                                            data-start="1400"
+                                                            data-easing="Power4.easeOut"
+                                                            data-endspeed="600"
+                                                            data-endeasing="Power4.easeIn"><a href="http://192.168.2.219/nextcloud/">NextCloud</a>
+                                                        </div>
+                                                    
+                                                    </li>
+
+
+                                                    <!-- SLIDE 2 -->
+                                                    <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+                                                      <img src="img/slider/transparent.png" alt="slide2" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />             
+                                                      <!-- LAYER NR. 1 -->                
+                                                      <div class="tp-caption lft ltt tp-resizeme slide_title slide_info_center"
+                                                           data-x="0"
+                                                           data-y="45"
+                                                           data-speed="800"
+                                                           data-start="1400"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="300"
+                                                           data-endeasing="Power4.easeIn">实验室合影
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 2 -->
+                                                      <div class="tp-caption lft ltt tp-resizeme slide_descr slide_info_center"
+                                                           data-x="0"
+                                                           data-y="175"
+                                                           data-speed="700"
+                                                           data-start="1200"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="600"
+                                                           data-endeasing="Power4.easeIn">未拍
+                                                      </div>  
+                                                      
+                                                      <!-- LAYER NR. 3 -->
+                                                      <div class="tp-caption lfb ltb tp-resizeme slide_img z_index2"
+                                                           data-x="185"
+                                                           data-y="247"
+                                                           data-speed="800"
+                                                           data-start="700"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="500"
+                                                           data-endeasing="Power4.easeIn"><img src="img/slider/ laptop.png" alt=""/>
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 4 -->
+                                                      <div class="tp-caption lfl ltl tp-resizeme slide_img z_index3"
+                                                           data-x="58"
+                                                           data-y="380"
+                                                           data-speed="1000"
+                                                           data-start="1200"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="500"
+                                                           data-endeasing="Power4.easeIn"><img src="img/slider/ ipad.png" alt=""/>
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 5 -->
+                                                      <div class="tp-caption lfr ltr tp-resizeme slide_img z_index4"
+                                                           data-x="928"
+                                                           data-y="700"
+                                                           data-speed="1000"
+                                                           data-start="1400"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="500"
+                                                           data-endeasing="Power4.easeIn"><img src="img/slider/ mouse.png" alt=""/>
+                                                      </div>                                                    
+                                                      
+                                                      <!-- LAYER NR. 6 -->
+                                                      <div class="tp-caption lfb ltb tp-resizeme slide_img z_index5"
+                                                           data-x="258"
+                                                           data-y="522"
+                                                           data-speed="1000"
+                                                           data-start="1800"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="500"
+                                                           data-endeasing="Power4.easeIn"><img src="img/slider/ iphone.png" alt=""/>
+                                                      </div>
+                                                  </li>
+                                                    
+                                                    <!-- SLIDE 3 -->
+                                                    <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+                                                      <img src="img/slider/transparent.png" alt="slide3" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />              
+                                                      <!-- LAYER NR. 1 -->
+                                                      <div class="tp-caption customin z_index2"
+                                                      	   data-x="692"
+                                                           data-y="0"
+                                                           data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:1000;transformOrigin:50% 50%;"
+                                                           data-speed="1500"
+                                                           data-start="500"
+                                                           data-easing="Power3.easeInOut"
+                                                           data-endspeed="300"><img src="img/slider/desktop.png" alt=""/>
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 2 -->
+                                                      <div class="tp-caption lfb ltb tp-resizeme slide_img z_index3"
+                                                           data-x="700"
+                                                           data-y="709"
+                                                           data-speed="1400"
+                                                           data-start="1300"
+                                                           data-easing="Back.easeInOut"
+                                                           data-endspeed="1000"
+                                                           data-endeasing="Power4.easeIn"><img src="img/slider/keyboard.png" alt=""/>
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 3 -->
+                                                      <div class="tp-caption lfb ltb tp-resizeme slide_img z_index4"
+                                                           data-x="1079"
+                                                           data-y="725"
+                                                           data-speed="1500"
+                                                           data-start="1500"
+                                                           data-easing="Back.easeInOut"
+                                                           data-endspeed="500"
+                                                           data-endeasing="Power4.easeIn"><img src="img/slider/mouse2.png" alt=""/>
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 4 -->                
+                                                      <div class="tp-caption lft ltt tp-resizeme slide_title font_size130"
+                                                           data-x="0"
+                                                           data-y="118"
+                                                           data-speed="1000"
+                                                           data-start="1800"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="300"
+                                                           data-endeasing="Power4.easeIn">Innovation
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 5 -->                
+                                                      <div class="tp-caption lft ltt tp-resizeme slide_title font_size130"
+                                                           data-x="0"
+                                                           data-y="276"
+                                                           data-speed="1000"
+                                                           data-start="1600"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="300"
+                                                           data-endeasing="Power4.easeIn">No Limits
+                                                      </div>
+                                                      
+                                                      <!-- LAYER NR. 6 -->
+                                                      <div class="tp-caption lfb ltb tp-resizeme slide_descr"
+                                                           data-x="0"
+                                                           data-y="420"
+                                                           data-speed="1000"
+                                                           data-start="1600"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="600"
+                                                           data-endeasing="Power4.easeIn">创造无极限<br>只要敢做，没有什么是不可能的
+                                                      </div>                                                      
+                                                      
+                                                      <div class="tp-caption lfb ltb tp-resizeme slide_btn"
+                                                           data-x="95"
+                                                           data-y="593"
+                                                           data-speed="1000"
+                                                           data-start="1800"
+                                                           data-easing="Power4.easeOut"
+                                                           data-endspeed="600"
+                                                           data-endeasing="Power4.easeIn"><a href="recruit.html">加入我们</a>
+                                                      </div>
+                                                      
+                                                      
+                                                  </li>                                                                                                                                
+                                                </ul>
+                                            </div>
+                                        </div>                                        	
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- //Slider -->
+                            
+
+
+                            <div class="row">
+                             	<div class="col-sm-12 module_cont pb0">
+                                	<div class="bg_title">
+                                    	<h2>我们的实验室文化</h2>
+                                    </div>                                  
+                                </div>
+                             </div>
+                             
+                             <div class="row">
+								<div class="col-sm-6 module_cont pb30">
+                                    <div class="module_content shortcode_iconbox type4 animate" data-anim-type="fadeInLeft" data-anim-delay="200">
+                                        <a href="javascript:void(0);">			
+                                            <div class="iconbox_wrapper">
+                                            	<div class="icon_title_wrap">
+                                                    <div class="ico"><img src="img/icons/icon8.png" class="icon_def" width="80" height="80" alt="" />
+                                                        <img src="img/retina/icons/icon8.png" class="icon_retina" width="80" height="80" alt="" />
+                                                    </div>
+                                                    <h5 class="iconbox_title">加入我们要求</h5>
+                                                </div>
+                                                <div class="iconbox_body">						
+                                                    <p>对于任何想要加入107创新实验室的同学，我们都秉持着欢迎，开放以及信任的态度；在这里，无论绩点的高低，个人社交关系，都是大学一个新的开始。请不要将社团&班级工作带进实验室！</p>
+                                                </div>					
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="module_content shortcode_iconbox type4 animate" data-anim-type="fadeInLeft" data-anim-delay="250">
+                                        <a href="javascript:void(0);">			
+                                            <div class="iconbox_wrapper">
+                                            	<div class="icon_title_wrap">
+                                                    <div class="ico"><img src="img/icons/icon9.png" class="icon_def" width="80" height="80" alt="" />
+                                                        <img src="img/retina/icons/icon9.png" class="icon_retina" width="80" height="56" alt="" />
+                                                    </div>
+                                                    <h5 class="iconbox_title">提供技术支持</h5>
+                                                </div>
+                                                <div class="iconbox_body">						
+                                                    <p>107创新实验室，兼备了硬件和软件方向，在这里，有着信息工程学院最好的科研资源以及历届留下的学习资料，有着各指导老师和辅导员的支持，有着曾参加并获奖的学长学姐们的帮助，尽全力拼搏吧！</p>
+                                                </div>					
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="module_content shortcode_iconbox type4 animate" data-anim-type="fadeInLeft" data-anim-delay="300">
+                                        <a href="javascript:void(0);">			
+                                            <div class="iconbox_wrapper">
+                                            	<div class="icon_title_wrap">
+                                                    <div class="ico"><img src="img/icons/icon16.png" class="icon_def" width="80" height="80" alt="" />
+                                                        <img src="img/retina/icons/icon16.png" class="icon_retina" width="80" height="56" alt="" />
+                                                    </div>
+                                                    <h5 class="iconbox_title">正常招新时间</h5>
+                                                </div>
+                                                <div class="iconbox_body">						
+                                                    <p>107创新实验室，计划于每年的3，4月份面向大一全体同学以及辅导员推荐的大二同学进行招新。（但每年可能会有特殊招新）</p>
+                                                </div>					
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div> 
+                                <div class="col-sm-6 module_cont pb30 animate" data-anim-type="fadeIn" data-anim-delay="250">
+                                	<img src="img/imgs/home1.png" class="img-responsive" alt="" />
+                                </div>        	
+                             </div>  
+
+                            
+                             
+                            <div class="fw_block bg_start pt74 pb50 grey_bg mb60">
+                                <div class="row">
+                                    <div class="col-sm-12 module_cont pb0">
+                                        <div class="bg_title">
+                                            <h2 class="fleft">我们参加的比赛&获得的奖项</h2>
+                                            <!-- Filter_block -->
+                                            <div class="filter_block">
+                                                <div class="filter_navigation">
+                                                    <ul id="options" class="splitter">
+                                                        <li>
+                                                            <ul data-option-key="filter" class="optionset">
+                                                                <li class="selected"><a data-option-value="*" data-catname="all" href="#filter">全部</a></li>
+                                                                <li><a data-option-value=".branding" data-catname="branding" href="#filter">电赛</a></li>
+                                                                <li><a data-option-value=".polygraphy" data-catname="polygraphy" href="#filter">软件杯</a></li>
+                                                                <li><a data-option-value=".textstyle" data-catname="textstyle" href="#filter">嵌入式</a></li>
+                                                                <li><a data-option-value=".webui" data-catname="webui" href="#filter">FPGA</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- //Filter_block -->
+                                            <div class="clear"></div>
+                                        </div>                                   
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="sorting_block image-grid featured_items photo_gallery" id="list">
+                                        <div class="col-sm-4 branding element">                    
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/1.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">2020 TI杯</div>
+                                                            <a href="img/portfolio/370_300/1.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="col-sm-4 polygraphy element">                    
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/2.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">软件杯证书</div>
+                                                            <a href="img/portfolio/370_300/2.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                              
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="col-sm-4 textstyle element">                    
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/3.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">校长通令嘉奖</div>
+                                                            <a href="img/portfolio/370_300/3.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                              
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="col-sm-4 webui element">                    
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/4.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">嵌入式合照</div>
+                                                            <a href="img/portfolio/370_300/4.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                 
+                                        </div>
+                                        <div class="col-sm-4 branding element">                   
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/5.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">2018 TI杯</div>
+                                                            <a href="img/portfolio/370_300/5.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="col-sm-4 polygraphy element">   
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/6.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">软件杯合照</div>
+                                                            <a href="img/portfolio/370_300/6.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="col-sm-4 textstyle element">                   
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/7.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">嵌入式证书</div>
+                                                            <a href="img/portfolio/370_300/7.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                   
+                                        </div>
+                                        <div class="col-sm-4 webui element">                    
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/8.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">FPGA证书</div>
+                                                            <a href="img/portfolio/370_300/8.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                  
+                                        </div>
+                                        <div class="col-sm-4 branding element">                   
+                                            <div class="item animate" data-anim-type="bounceIn" data-anim-delay="250">
+                                                <div class="item_wrapper">                                  
+                                                    <div class="img_block wrapped_img">
+                                                        <img src="img/portfolio/370_300/9.jpg" alt="">
+                                                        <span class="block_fade"></span>
+                                                        <div class="post_hover_info">
+                                                            <div class="featured_meta">EduHacks 2020 北京</div>
+                                                            <a href="img/portfolio/370_300/9.jpg" class="photozoom featured_ico_link view_link"><i class="icon-expand"></i></a>
+                                                        </div>
+                                                    </div>                                                                                                            
+                                                </div>
+                                            </div>                                  
+                                        </div>                                                                                                                           
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="row">
+                                <div class="col-sm-12 module_cont pb0">
+                                    <div class="bg_title">
+                                        <h2>观看宣传视频</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="row">
+                            	<div class="col-sm-12 module_cont pb15 module_tabs animate" data-anim-type="fadeInUp" data-anim-delay="300">
+                                    <div class="shortcode_tabs type3">
+                                            <div class="ip">
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <video src="video/MV.mp4"  loop="loop" controls="controls">
+                                                        <p>你的浏览器不支持video标签.</p>
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                            <div id="video">
+                                <video src="video/mv.mp4" id="videoShow"></video>
+                                <span class="VideoBtn"><img src="img/bo1.png"></span>
+                            </div>
+                            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+                            </div>
+                           
+
+                            <div class="row">
+                             	<div class="col-sm-12 module_cont pb5">
+                                	<div class="bg_title">
+                                    	<h2>团队成员</h2>
+                                    </div>                                  
+                                </div>
+                            </div>
+       
+                            <div class="row">
+                                <div class="col-sm-12 module_cont pb80">   
+                                	<div class="section-clients featured_items">
+                                    	<div class="items3">
+                                            <ul class="client-list item_list">
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="250">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/1.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">Sheldon Lee, 软件工程嵌入式大四在读，学习C++和Python编程语言用于深度学习和计算机视觉开发。个人主页：<a href="https://ccp101.com/">https://ccp101.com/</a>，Github地址：<a href="https://github.com/ccp101/">https://github.com/ccp101/</a>。获得奖项：2018年中国软件杯二等奖；2018年全国大学生嵌入式三等奖；2019年发现杯华东赛区三等奖;2020年C4江苏省三等奖...</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head1.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>CCP101</b>
+                                                                    <span class="title">软件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="300">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/3.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">Aye10032，机自内鬼。个人主页：<a href="https://www.aye10032.com/">https://www.aye10032.com/</a>，Github地址：<a href="https://github.com/aye10032/">https://github.com/aye10032/</a>，B站关注：<a href="https://space.bilibili.com/40077740/">https://space.bilibili.com/40077740/</a>，目前107创新实验室资历最老的三朝元老。各种国奖，奖项太多，四舍五入，忽略不计。</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head3.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>Aye10032</b>
+                                                                    <span class="title">软件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="350">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/2.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">Doublezhuang，计算机技术与科学大三在读，个人主页：<a href="https://www.doublezhuang.com/">https://www.doublezhuang.com/</a>。获得奖项：2018年中国软件杯二等奖；2020年江苏省电子设计大赛二等奖；2019年发现杯华东赛区三等奖;2020年C4江苏省三等奖...</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head2.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>Doublezhuang</b>
+                                                                    <span class="title">软件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="300">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/4.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">Gungnir Kiko，软件工程大三在读,个人主页：<a href="https://www.kiko612.com/">https://www.kiko612.com/</a>，Github地址：<a href="https://github.com/kiko612/">https://github.com/kiko612/</a>。获得奖项：2020年江苏省电子设计大赛二等奖；2019年发现杯华东赛区三等奖;2020年C4江苏省三等奖...</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head4.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>KIKO</b>
+                                                                    <span class="title">软件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="350">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/5.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">徐铭鸿，计算机科学与技术（嵌入式）大三在读，学习Java、Python编程语言，自然语言处理。个人主页：<a href="https://wolf-guard.github.io/">https://wolf-guard.github.io/</a>，Github地址：<a href="https://github.com/Wolf-Guard/">https://github.com/Wolf-Guard/</a>。获得奖项：2020年中国软件杯二等奖...</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head5.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>徐铭鸿</b>
+                                                                    <span class="title">硬件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="350">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/6.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">汤纪彦，。。。</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head6.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>汤纪彦</b>
+                                                                    <span class="title">软件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="350">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/1.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">zzy，计算机科学与技术大二在读，学习Java编程语言用于前后端开发。</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head7.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>zzy</b>
+                                                                    <span class="title">软件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="350">
+                                                    <i>
+                                                        <img class="icon-cl-sweden" src="img/imgs/partners/2.jpg" alt="">
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">席鸿健，计算机科学与技术嵌入式大二在读，学习C++编程语言用于单片机开发，学习Fusion360用于建模，学习立创EDA和AD用于电路板设计。OSHWHub地址：<a href="https://wolf-guard.github.io/">https://oshwhub.com/Nikolai/</a>。获得奖项：2020年江苏省电子设计大赛二等奖...</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><img src="img/imgs/heads/head8.jpg" alt=""></span>
+                                                                <span class="cont">
+                                                                    <b>席鸿键</b>
+                                                                    <span class="title">硬件组</span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                                <li class="animate" data-anim-type="fadeInLeft" data-anim-delay="400">
+                                                    <i>
+                                                        <a href="recruit.html"><img class="icon-cl-sweden" src="img/imgs/partners/3.jpg" alt=""></a>
+                                                    </i>
+                                                    <blockquote>
+                                                        <p class="quote">也许我们正在寻找的就是你！</p>
+                                                        <div class="author">
+                                                            <p>
+                                                                <span class="img"><a href="recruit.html"><img src="img/imgs/heads/head9.jpg" alt=""></a></span>
+                                                                <span class="cont">
+                                                                    <b>下一个就是你</b>
+                                                                    <span class="title"><a href="recruit.html">加入我们</a></span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </blockquote>
+                                                </li>
+                                            </ul>
+                                        </div>
+									</div>    
+                                </div>
+                            </div>                                   
+                            
+
+                            <div class="row">
+                                <div class="col-sm-12 module_cont pb0">
+                                    <div class="bg_title">
+                                        <h2>加入我们</h2>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 module_cont animate" data-anim-type="fadeInUp" data-anim-delay="250">
+                                    <div class="shortcode_promoblock">
+                                        <div class="promoblock_wrapper">
+                                            <div class="promo_text_block">
+                                                <div class="promo_text_block_wrapper">
+                                                    <h2 class="promo_text_main_title">我们在寻找志在未来的你</h2>
+                                                    <h6 class="promo_text_additional_title">寻梦，是每个人心中的那片绿叶。107创新实验室就是一个为志在科研，壮实自己的同学提供了一个锻炼自我的平台。我们是一群爱好创造，乐于创新的二次元爱好者，对于已经加入我们的，我们没有劳烦的任何任务以及活动文案，因为我们不是社团，亦不是部门，我们只是一群志同道合的朋友，实验室正因为有高质量的新鲜血液的注入，才有足够高素质的科研力量，才能更有效地为校争光，实验室的荣耀与我等共存。</h6>
+                                                </div>
+                                            </div>
+                                            <div class="promo_button_block"><a class="shortcode_button btn_large btn_type5" href="recruit.html">加入我们</a></div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="pre_footer">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="sidepanel widget_text">
+                            <h4 class="title">联系我们</h4>
+                            <p><i class="icon-home"></i><span> 地址:南京航空航天大学金城学院A2-107</span> </p>
+                            <p><i class="icon-mail-forward"></i><span> 邮箱:</span> nuaajc.lab107@gmail.com</p>
+                            <p><i class="icon-mail-forward"></i><span> QQ群:</span> 1063928903</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sidepanel widget_posts">
+                            <h4 class="title">竞赛官网</h4>
+                            <ul class="recent_posts">                
+                                <li class="with_img">
+                                    <div class="recent_posts_content">
+                                        <a href="http://www.socchina.net/">
+                                            <img src="img/bisai1.png" >
+                                        </a>
+                                        <a href="http://www.socchina.net/" class="title">全国大学生嵌入式芯片与系统设计竞赛</a>
+                                    </div>
+                                </li>
+
+                                <li class="with_img">
+                                    <div class="recent_posts_content">
+                                        <a href="http://www.cnsoftbei.com/">
+                                            <img src="img/bisai2.png" >
+                                        </a>
+                                        <a href="http://www.cnsoftbei.com/" class="title">中国软件设计大赛|中国软件杯</a>
+                                    </div>
+                                </li>
+
+                                <li class="with_img">
+                                    <div class="recent_posts_content">
+                                        <a href="http://www.fpgachina.cn/">
+                                            <img src="img/bisai1.png" >
+                                        </a>
+                                        <a href="http://www.fpgachina.cn/" class="title">全国大学生FPGA创新设计竞赛</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sidepanel widget_review">
+                            <h4 class="title">更多内容</h4>
+                            <div class="last_review">
+                                <p class="review_text">Each lesson might be difficult to integrate into your life at first, but if you ease your way into each lesson, one at a time, you’ll notice an immediate improvement in your overall performance. So go ahead, give them a try.</p>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="copyright">107创新实验室 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright&nbsp;&nbsp;©2020&nbsp;-&nbsp;2020. &nbsp;All Rights Reserved by 107 INNOVATION LAB.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by Gungnir Kiko</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/modules.js"></script>	
+	<script type="text/javascript" src="js/theme.js"></script> 
+    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>    
+    <script type="text/javascript">
+		jQuery(document).ready(function() {
+		   "use strict";			   						
+		   jQuery('.fullscreen_slider').show().revolution({
+				delay: 5000,
+				startwidth: 1170,
+				startheight: 765,
+				fullWidth:"off",
+				fullScreen:"on",
+				navigationType:"bullet",
+				fullScreenOffsetContainer: ".main_header",
+				fullScreenOffset: ""
+			});							
+		});
+	</script> 
+    
+    <!-- Portfolio -->
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/sorting.js"></script>
+    <script>	
+		items_set = [                    
+			{src : 'img/portfolio/370_300/10.jpg', zoom : 'img/portfolio/370_300/10.jpg', url : 'portfolio_post_fullwidth.html', columnclass: 'col-sm-4', sortcategory: 'webui', title: 'Unde Sed ut', itemcategory: 'Print Design'},
+			{src : 'img/portfolio/370_300/11.jpg', zoom : 'img/portfolio/370_300/11.jpg', url : 'portfolio_post_fullwidth.html', columnclass: 'col-sm-4', sortcategory: 'polygraphy', title: 'Tempore Nam Libero', itemcategory: 'Business'},
+			{src : 'img/portfolio/370_300/12.jpg', zoom : 'img/portfolio/370_300/12.jpg', url : 'portfolio_post_fullwidth.html', columnclass: 'col-sm-4', sortcategory: 'textstyle', title: 'Dolores Magni', itemcategory: 'People'}
+		];
+		jQuery('#list').portfolio_addon({
+			type : 2, // 2-4 columns portfolio
+			load_count : 3,
+			items : items_set
+		});
+        if(window.console&&window.console.log){
+            console.log("一张网页，要通过怎样的过程，才能抵达用户面前？");
+            console.log("一个码农，要经历怎样的思考，才能重新定义创造？");
+            console.log("加入107创新实验室，享受创造的过程！");
+            console.log("请在个人简介之前备注:来自Gungnir Kiko推荐");
+        }
+	</script> 
+</body>
+</html>
